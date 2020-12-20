@@ -2,6 +2,7 @@ import React from "react";
 import ExternalLink from "./ExternalLink";
 import "./App.css";
 import hamburger from "./assets/hamburger.png";
+import close from "./assets/close.png";
 
 const MyLinks = () => {
   return (
@@ -37,7 +38,11 @@ const App = () => {
             <div>Evan de Jesus</div>
           </div>
           <div className="App-hamburger" onClick={toggleMenu}>
-            <img src={hamburger} alt="hamburger" />
+            {isMenuShowing ? (
+              <img src={close} alt="x" />
+            ) : (
+              <img src={hamburger} alt="=" />
+            )}
           </div>
           <div className="App-links-wrapper">
             <div className="App-links">
