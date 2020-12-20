@@ -43,5 +43,10 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1"
+  },
+  "author": {
+    "name": "Evan de Jesus",
+    "email": "evanjdejesus@gmail.com",
+    "url": "https://evandejes.us"
   }
 }
