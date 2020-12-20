@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ExternalLink from "./ExternalLink";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-navigation-wrapper">
+        <div className="App-navigation">
+          <div className="App-title">Evan de Jesus</div>
+          <div style={{ display: "flex", flex: 1, alignItems: "flex-end" }}>
+            <div className="App-links">
+              <ExternalLink href="https://github.com/ejdejesu" text="GitHub" />
+              <ExternalLink
+                href="https://www.instagram.com/evandejesus_"
+                text="Instagram"
+              />
+              <ExternalLink href="https://ko-fi.com/evandejesus" text="Ko-fi" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
