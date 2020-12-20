@@ -7,8 +7,10 @@ function App() {
     <div className="App">
       <div className="App-navigation-wrapper">
         <div className="App-navigation">
-          <div className="App-title">Evan de Jesus</div>
-          <div style={{ display: "flex", flex: 1, alignItems: "flex-end" }}>
+          <div className="App-title">
+            <div>Evan de Jesus</div>
+          </div>
+          <div className="App-links-wrapper">
             <div className="App-links">
               <ExternalLink href="https://github.com/ejdejesu" text="GitHub" />
               <ExternalLink
