@@ -2,13 +2,8 @@
   --black: #3f3844;
 }
 
-.red {
-  background: red !important;
-}
-
 .App {
   position: relative;
-  font-family: "CircularStd";
   height: 100vh;
   width: 100vw;
 }
@@ -28,6 +23,7 @@
   display: flex;
   align-items: center;
   font-size: 1.4em;
+  font-family: "CircularStd";
 }
 
 .App-title {
@@ -100,4 +96,20 @@
   font-size: 2.5em;
   padding: 0.3em 0;
   flex: 1;
+}
+
+.App-landing-page {
+  height: 85vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-landing-page-content {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }

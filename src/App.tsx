@@ -1,8 +1,9 @@
 import React from "react";
 import ExternalLink from "./ExternalLink";
-import "./App.css";
+import TerminalText from "./TerminalText";
 import hamburger from "./assets/hamburger.png";
 import close from "./assets/close.png";
+import "./App.css";
 
 const MyLinks = () => {
   return (
@@ -49,6 +50,11 @@ const App = () => {
               <MyLinks />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="App-landing-page">
+        <div className="App-landing-page-content">
+          <TerminalText />
         </div>
       </div>
     </div>
