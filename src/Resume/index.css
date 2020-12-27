@@ -1,5 +1,11 @@
 .Resume-container {
-  padding-top: 8%;
+  position: relative;
+  top: 100px;
+}
+
+.Resume-container h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .Resume-content {
