@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 type TerminalTextProps = {};
 const TerminalText: FunctionComponent<TerminalTextProps> = () => {
@@ -7,9 +8,9 @@ const TerminalText: FunctionComponent<TerminalTextProps> = () => {
       <div>
         <div className="header one">Hi, I'm Evan.</div>
         <div className="header two">Software Developer and Devops Engineer</div>
-        <a className="resume" href="https://google.com">
-          Resume
-        </a>
+        <Link to="/resume">
+          <div className="resume">Resume</div>
+        </Link>
       </div>
     </div>
   );

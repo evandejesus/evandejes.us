@@ -11,7 +11,7 @@
   font-size: 1.75em;
 }
 
-a.resume {
+.resume {
   margin: 25px 0;
   position: relative;
   display: inline-block;
@@ -24,7 +24,7 @@ a.resume {
   padding: 1rem 1.5rem;
 }
 
-a.resume:hover {
+.resume:hover {
   color: #fff;
   background: var(--black);
 }
