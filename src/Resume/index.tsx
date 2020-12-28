@@ -9,18 +9,20 @@ const Resume = () => {
         <h2>Wayne State University</h2>
         <h3>Bachelor of Science in Computer Science</h3>
         <p>
-          Transferred as of August 2019 Class of 2020
-          <br />
           Detroit, MI
+          <br />
+          Transferred as of August 2019
+          <br />
+          Class of 2020
           <br />
           GPA: 3.62
         </p>
         <h2>Michigan Technological University</h2>
         <h3>Bachelor of Science in Computer Science</h3>
         <p>
-          Attended from August 2016 - August 2019
-          <br />
           Houghton, MI
+          <br />
+          Attended from August 2016 - August 2019
           <br />
           GPA: 3.71
         </p>
