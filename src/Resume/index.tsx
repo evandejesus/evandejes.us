@@ -5,12 +5,34 @@ const Resume = () => {
   return (
     <div className="Resume-container">
       <div className="Resume-content">
-        <h1>Education</h1>
-        <h1>Certifications</h1>
-        <h1>Experience</h1>
-        <h1>Projects</h1>
-        <h1>Skills & Software</h1>
-        <h1>Activities</h1>
+        <h1 className="header">Education</h1>
+        <h2>Wayne State University</h2>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>
+          Transferred as of August 2019 Class of 2020
+          <br />
+          Detroit, MI
+          <br />
+          GPA: 3.62
+        </p>
+        <h2>Michigan Technological University</h2>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>
+          Attended from August 2016 - August 2019
+          <br />
+          Houghton, MI
+          <br />
+          GPA: 3.71
+        </p>
+        <h1 className="header">Certifications</h1>
+        <ul>
+          <li>
+            Certified Kubernetes Application Developer - CKAD-2000-003288-0100
+          </li>
+        </ul>
+        <h1 className="header">Experience</h1>
+        <h1 className="header">Projects</h1>
+        <h1 className="header">Skills & Software</h1>
       </div>
     </div>
   );
