@@ -115,8 +115,8 @@ resource "aws_cloudfront_distribution" "this" {
     target_origin_id       = local.origin_id
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD", "OPTIONS"]
-    default_ttl            = 0
-    max_ttl                = 0
+    default_ttl            = 3600
+    max_ttl                = 604800
     min_ttl                = 0
     viewer_protocol_policy = "redirect-to-https"
     forwarded_values {
