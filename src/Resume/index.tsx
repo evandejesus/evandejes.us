@@ -33,6 +33,12 @@ const Resume = () => {
           </li>
         </ul>
         <h1 className="header">Experience</h1>
+        <h2>24G</h2>
+        <h3>Devops Engineer</h3>
+        <p>
+          Troy, MI
+          <br />
+        </p>
         <h1 className="header">Projects</h1>
         <h1 className="header">Skills & Software</h1>
       </div>
