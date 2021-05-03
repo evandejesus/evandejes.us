@@ -3,12 +3,16 @@ import ExternalLink from "./ExternalLink";
 import TerminalText from "./TerminalText";
 import hamburger from "./assets/hamburger.png";
 import close from "./assets/close.png";
+import donut1 from "./assets/donuts/donut1.png";
 import "./App.css";
 
 const MyLinks = () => {
   return (
     <>
-      <ExternalLink href="https://www.linkedin.com/in/evan-de-jesus-581a51162" text="LinkedIn" />
+      <ExternalLink
+        href="https://www.linkedin.com/in/evan-de-jesus-581a51162"
+        text="LinkedIn"
+      />
       <ExternalLink href="https://github.com/ejdejesu" text="GitHub" />
       <ExternalLink
         href="https://www.instagram.com/evandejesus_"
@@ -56,6 +60,9 @@ const App = () => {
       <div className="App-landing-page">
         <div className="App-landing-page-content">
           <TerminalText />
+          <div className="App-donuts">
+          <img src={donut1} alt=""/>
+        </div>
         </div>
       </div>
     </div>

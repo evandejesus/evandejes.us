@@ -9,7 +9,6 @@
 }
 
 .App-navigation-wrapper {
-  position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -104,15 +103,27 @@
 .App-landing-page {
   height: 85vh;
   width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .App-landing-page-content {
-  max-width: 1140px;
+  /* max-width: 1140px; */
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
   padding: 0 15px;
+}
+
+.App-donuts {
+  /* width: 100%; */
+  display: flex;
+  flex: 1;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.App-donuts img {
+  width: 80%;
 }

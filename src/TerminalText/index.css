@@ -1,5 +1,13 @@
 .TerminalText-container {
+  position: relative;
+  flex: 1;
+  text-align: center;
   --black: #3f3844;
+}
+
+.TerminalText-content {
+  position: absolute;
+  top: 50%;
 }
 
 .header.one {
