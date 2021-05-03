@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from "react";
 import "./index.css";
+import resume from "../assets/resume.pdf";
+
 type TerminalTextProps = {};
 const TerminalText: FunctionComponent<TerminalTextProps> = () => {
   return (
@@ -7,7 +9,7 @@ const TerminalText: FunctionComponent<TerminalTextProps> = () => {
       <div>
         <div className="header one">Hi, I'm Evan.</div>
         <div className="header two">Software Developer and Devops Engineer</div>
-        <a className="resume" href="https://google.com">
+        <a className="resume" href={resume} target="_blank" rel="noreferrer">
           Resume
         </a>
       </div>
