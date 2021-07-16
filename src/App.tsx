@@ -9,7 +9,7 @@ const MyLinks = () => {
   return (
     <>
       <ExternalLink href="https://www.linkedin.com/in/evan-de-jesus-581a51162" text="LinkedIn" />
-      <ExternalLink href="https://github.com/ejdejesu" text="GitHub" />
+      <ExternalLink href="https://github.com/evandejesus" text="GitHub" />
       <ExternalLink
         href="https://www.instagram.com/evandejesus_"
         text="Instagram"
