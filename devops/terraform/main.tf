@@ -1,7 +1,6 @@
 provider "aws" {
   region  = "us-east-1"
   profile = "evan"
-  version = "~> 3.22.0"
 }
 
 locals {
