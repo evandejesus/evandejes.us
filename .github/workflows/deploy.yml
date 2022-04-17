@@ -8,15 +8,9 @@ on:
   push:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 jobs:    
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
     - name: Checkout repository
@@ -31,6 +25,7 @@ jobs:
 
     - uses:  helaili/jekyll-action@v2
       with:
+        build_only: true
         token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Deploy to s3
