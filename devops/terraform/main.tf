@@ -11,6 +11,11 @@ locals {
   }
 }
 
+resource "random_string" "referer" {
+  length  = 16
+  special = false
+}
+
 /* S3 */
 resource "aws_s3_bucket" "this" {
   bucket        = local.domain
@@ -33,30 +38,23 @@ resource "aws_s3_bucket" "this" {
 data "aws_iam_policy_document" "this" {
 
   statement {
-    sid       = "AllowSSLRequestsOnly"
-    actions   = ["s3:*"]
-    effect    = "Deny"
-    resources = [aws_s3_bucket.this.arn, "${aws_s3_bucket.this.arn}/*"]
-    condition {
-      test     = "Bool"
-      variable = "aws:SecureTransport"
-      values   = ["false"]
-    }
+    sid     = "Allow get requests originating from cloudfront"
+    actions = ["s3:GetObject", "s3:GetObjectVersion"]
+    effect  = "Allow"
     principals {
       type        = "*"
       identifiers = ["*"]
     }
-  }
-
-  statement {
-    sid       = "s3StaticHostingPolicy"
-    actions   = ["s3:GetObject"]
-    effect    = "Allow"
     resources = ["${aws_s3_bucket.this.arn}/*"]
-    principals {
-      type        = "AWS"
-      identifiers = [aws_cloudfront_origin_access_identity.this.iam_arn]
+    condition {
+      test     = "StringLike"
+      variable = "aws:Referer"
+
+      values = [
+        random_string.referer.result
+      ]
     }
+
   }
 
 }
@@ -99,17 +97,6 @@ resource "aws_cloudfront_distribution" "this" {
   default_root_object = "index.html"
   tags                = local.tags
 
-  # Primary Origin
-  origin {
-    domain_name = aws_s3_bucket.this.bucket_regional_domain_name
-    # Origins and group origins can't have the same ID.
-    origin_id = local.origin_id
-
-    s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.this.cloudfront_access_identity_path
-    }
-  }
-
   default_cache_behavior {
     target_origin_id       = local.origin_id
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
@@ -128,6 +115,39 @@ resource "aws_cloudfront_distribution" "this" {
       cookies {
         forward = "none"
       }
+    }
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 10
+    error_code            = 404
+    response_code         = 404
+    response_page_path    = "/404.html"
+  }
+
+
+  origin {
+    connection_attempts = 3
+    connection_timeout  = 10
+    domain_name         = "evandejes.us.s3-website-us-east-1.amazonaws.com"
+    origin_id           = "cloudfront-distribution-origin-evandejes.us"
+
+    custom_header {
+      name  = "Referer"
+      value = random_string.referer.result
+    }
+
+    custom_origin_config {
+      http_port                = 80
+      https_port               = 443
+      origin_keepalive_timeout = 5
+      origin_protocol_policy   = "http-only"
+      origin_read_timeout      = 30
+      origin_ssl_protocols = [
+        "TLSv1",
+        "TLSv1.1",
+        "TLSv1.2",
+      ]
     }
   }
 
