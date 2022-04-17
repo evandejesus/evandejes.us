@@ -1,0 +1,37 @@
+body {
+  color: white;
+  background-color: black;
+  font-family: monospace;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.wrapper {
+  width: fit-content;
+  max-width: 640px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+h1 { line-height: 2rem; }
+
+hr {
+  text-align: center;
+  border: 0;
+
+  &:before { content: '/////' }
+  &:after { content: attr(data-content) '/////' }
+}
+
+table, th, td {
+  border: thin solid black;
+  border-collapse: collapse;
+}
+
+a:link {
+  color: rgb(255, 255, 44);
+}
+
+a:visited {
+  color: #80d15d;
+}
