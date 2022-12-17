@@ -1,0 +1,13 @@
+$backgroundColor: #f69494;
+$bodyColor: #000000;
+$bodyFont: "IBMPlexSansRegular";
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+.main-content {
+  padding: 5em 0 2em 0;
+}

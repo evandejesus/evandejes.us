@@ -1,0 +1,20 @@
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+
+    &.main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 3rem;
+        background-color: $backgroundColor;
+        // border: 2px solid black;
+    }
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
