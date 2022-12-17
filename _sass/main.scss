@@ -1,5 +1,7 @@
-$backgroundColor: #f69494;
-$bodyColor: #000000;
+$backgroundColor: #222222;
+$backgroundColor2: #434242;
+$bodyColor: #F3EFE0;
+$highlightColor: #22A39F;
 $bodyFont: "IBMPlexSansRegular";
 
 body {
@@ -10,4 +12,13 @@ body {
 
 .main-content {
   padding: 5em 0 2em 0;
+}
+
+.highlight {
+  color: $highlightColor;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
 }
