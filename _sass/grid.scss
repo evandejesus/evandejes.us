@@ -1,0 +1,43 @@
+@mixin grid-base {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: $gutter;
+    grid-row-gap: $gutter-row;
+  }
+  
+  @mixin grid-container {
+    @include grid-base;
+    margin-left: $page-margin;
+    margin-right: $page-margin;
+  
+    @include grid-media(tablet) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+  
+  .grid-container { //Use for extend
+    @include grid-container;
+  }
+  
+  @mixin grid-container-nested-small {
+    @include grid-base;
+  }
+  
+  @mixin grid-container-nested-big {
+    @include grid-base;
+  
+    @include grid-media(tablet) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  
+  @mixin grid-column-from-to($from: 1, $to: 12,) {
+    grid-column: #{$from} / #{($to + 1)};
+  }
+  
+  @mixin grid-column($spanAmount: 12) {
+    grid-column-end: span $spanAmount;
+  }
+  

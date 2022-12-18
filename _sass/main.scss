@@ -1,13 +1,7 @@
-$backgroundColor: #222222;
-$backgroundColor2: #434242;
-$bodyColor: #F3EFE0;
-$highlightColor: #22A39F;
-$bodyFont: "IBMPlexSansRegular";
-
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
+  background: $background-color;
+  color: $body-color;
+  font-family: $body-font;
 }
 
 .main-content {
@@ -15,7 +9,7 @@ body {
 }
 
 .highlight {
-  color: $highlightColor;
+  color: $highlight-color;
 }
 
 .title {

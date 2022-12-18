@@ -1,0 +1,8 @@
+.about-wrapper {
+    @include grid-container;
+}
+
+.about {
+    grid-row: 1;
+    grid-column: 1/8;
+}
