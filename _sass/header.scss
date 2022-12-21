@@ -11,9 +11,49 @@
         background-color: $background-color;
     }
 }
+
 .headroom--pinned {
     transform: translateY(0%);
 }
 .headroom--unpinned {
     transform: translateY(-100%);
+}
+
+.header-content {
+    @include grid-container;
+
+    .logo-wrapper {
+        grid-column: span 4;
+    }
+
+    .nav-wrapper {
+        grid-column: span 8;
+        text-align: right;
+
+        ul {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+        
+        a {
+            
+            color: $body-color;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: opacity 150ms ease, border-bottom  150ms ease;
+            
+
+            &.current, &:hover {
+                border-bottom: 2px solid $body-color;
+                opacity: 1;
+            }
+
+        }
+        
+    }
 }

@@ -1,6 +1,8 @@
 .home-wrapper {
+  @include grid-container;
     .title {
-        font-size: 4rem;
+        grid-column: span 8;
+        font-size: 3rem;
         font-family: 'Playfair Display', serif;
       }
 }
