@@ -1,5 +1,4 @@
 url: "https://evandejes.us" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
 title: "Evan" # the name of your site, e.g. ACME Corp.
 
 plugins:
@@ -11,4 +10,4 @@ navigation:
   - title: Home
     url: /
   - title: About
-    url: /about
+    url: /about.html
