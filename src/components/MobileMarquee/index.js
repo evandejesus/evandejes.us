@@ -1,8 +1,49 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import Marquee from "react-fast-marquee";
+import "./index.css";
+
+const quotes = [
+  "Don't be slow! Our prices are low.",
+  "The best for less.",
+  "Don't delay—sales today!",
+  "Keep calm and buy up.",
+  "It's the biggest sale of the year!",
+  "Everything you need—on a budget.",
+  "Enjoy the best rates!",
+  "Hurry before stock runs out!",
+];
+
+const colors = [
+  "#ffbe0bff",
+  "#fb5607ff",
+  "#ff006eff",
+  "#8338ecff",
+  "#3a86ffff",
+  "#6FD08C",
+  "ffffff",
+];
+
+/*
+
+*/
 
 const MobileMarquee = () => {
-  return <div>fuck you</div>;
+  return (
+    <div className="marquee-wrapper">
+      {quotes.slice(0, 7).map((quote, i) => {
+        return (
+          <Marquee
+            className={`marquee-element marquee-colors-${i}`}
+            gradient={false}
+            pauseOnClick="true"
+            speed={Math.floor(Math.random() * 100) + 80}
+          >
+            {quote}
+          </Marquee>
+        );
+      })}
+    </div>
+  );
 };
 
 export default MobileMarquee;

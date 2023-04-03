@@ -1,0 +1,56 @@
+.marquee-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.marquee-element {
+    height: 100%;
+    width: 100%;
+    font-size: 24vw;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+@media screen and (min-width: 600px) {
+  .marquee-element {
+    font-size: 12vw;
+  }
+}
+
+.marquee-colors-0 {
+    background-color: #ffbe0bff;
+    color:  #000000;
+}
+
+.marquee-colors-1 {
+    background-color: #fb5607ff;
+    color:  white;
+}
+
+.marquee-colors-2 {
+    background-color: #000000;
+    color:  white;
+}
+
+.marquee-colors-3 {
+    background-color: rgb(185, 136, 253);
+    color:  #000000;
+}
+
+.marquee-colors-4 {
+    background-color: #3a86ffff;
+    color:  white;
+}
+
+.marquee-colors-5 {
+    background-color: #ffffff;
+    color:  #000000;
+}
+
+.marquee-colors-6 {
+    background-color: #6FD08Cff;
+    color:  #000000;
+}
