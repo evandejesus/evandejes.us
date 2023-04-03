@@ -13,20 +13,6 @@ const quotes = [
   "Hurry before stock runs out!",
 ];
 
-const colors = [
-  "#ffbe0bff",
-  "#fb5607ff",
-  "#ff006eff",
-  "#8338ecff",
-  "#3a86ffff",
-  "#6FD08C",
-  "ffffff",
-];
-
-/*
-
-*/
-
 const MobileMarquee = () => {
   return (
     <div className="marquee-wrapper">
