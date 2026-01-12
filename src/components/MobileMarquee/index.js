@@ -22,9 +22,9 @@ const MobileMarquee = () => {
             className={`marquee-element marquee-colors-${i}`}
             gradient={false}
             pauseOnClick="true"
-            speed={Math.floor(Math.random() * 100) + 80}
+            speed={Math.floor(Math.random() * 200) + 50}
           >
-            {quote}
+            {quote + " "}
           </Marquee>
         );
       })}
