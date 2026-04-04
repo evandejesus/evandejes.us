@@ -1,13 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Polymath Display ─────────────────────────────────────────────────────── */
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-ThinIt.otf') format('opentype'); font-weight: 100; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-XLight.otf') format('opentype'); font-weight: 200; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-XLightIt.otf') format('opentype'); font-weight: 200; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-LightIt.otf') format('opentype'); font-weight: 300; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-MediumIt.otf') format('opentype'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-SemiboldIt.otf') format('opentype'); font-weight: 600; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-BoldIt.otf') format('opentype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Black.otf') format('opentype'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-BlackIt.otf') format('opentype'); font-weight: 900; font-style: italic; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-Super.otf') format('opentype'); font-weight: 950; font-style: normal; }
+@font-face { font-family: 'Polymath Display'; src: url('../brand_assets/Polymath Display/PolymathDispDemo-SuperIt.otf') format('opentype'); font-weight: 950; font-style: italic; }
+
+:root,
+[data-theme="light"] {
+  --cream: #F0EFE9;
+  --ink: #0E0E0D;
+  --volt: #E9FF47;
+  --muted: #898982;
+}
+
+[data-theme="dark"] {
+  --cream: #111110;
+  --ink: #ECEAE3;
+  --volt: #E9FF47;
+  --muted: #55554F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Polymath Display', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Exhibit label styling */
+.exhibit-label {
+  font-family: 'Polymath Display', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Divider between exhibits */
+.exhibit-divider {
+  border: none;
+  border-top: 1px solid rgba(14, 14, 13, 0.12);
 }

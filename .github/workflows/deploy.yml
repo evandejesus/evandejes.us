@@ -2,7 +2,7 @@ name: Deploy React
 
 on:
   push:
-    branches: [ react* ]
+    branches: [ master ]
 
 jobs:    
   deploy:
