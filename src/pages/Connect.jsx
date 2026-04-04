@@ -38,7 +38,7 @@ export default function Connect() {
         minHeight: '100vh',
         background: 'var(--cream)',
         display: 'flex',
-        flexDirection: 'column-reverse',
+        flexDirection: 'column',
       }}
     >
       {/* connect info */}

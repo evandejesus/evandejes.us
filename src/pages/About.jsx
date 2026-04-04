@@ -29,7 +29,7 @@ export default function About() {
         minHeight: '100vh',
         background: 'var(--cream)',
         display: 'flex',
-        flexDirection: 'column-reverse',
+        flexDirection: 'column',
       }}
     >
       {/* Bio */}
