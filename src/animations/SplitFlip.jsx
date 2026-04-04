@@ -19,7 +19,7 @@ export default function SplitFlip() {
     const width = container.offsetWidth
     const depth = -width / 8
     const transformOrigin = `50% 50% ${depth}px`
-    const animTime = 0.9
+    const animTime = 2
 
     // Collect char elements per line
     const lineChars = lineRefs.current.map(line =>
