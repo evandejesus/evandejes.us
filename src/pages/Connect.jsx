@@ -24,7 +24,8 @@ export default function Connect() {
       word.style.position = ''
       // Scale to fit container (minus 1.5rem padding each side)
       const available = container.offsetWidth - 48
-      word.style.fontSize = `${10 * (available / naturalWidth)}rem`
+      const MAX_FONT_SIZE = 18
+      word.style.fontSize = `${Math.min(MAX_FONT_SIZE, 10 * (available / naturalWidth))}rem`
     }
     document.fonts.ready.then(() => requestAnimationFrame(fit))
     window.addEventListener('resize', fit)
