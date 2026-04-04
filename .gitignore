@@ -26,3 +26,4 @@ temporary\ screenshots/**
 temporary screenshots/**
 
 /dist
+/.vite
