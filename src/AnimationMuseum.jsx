@@ -15,6 +15,11 @@
 import WordReveal from "./animations/WordReveal";
 import SplitFlip from "./animations/SplitFlip";
 import Horizontal from "./animations/Horizontal";
+import Boxes from "./animations/Boxes";
+import profileImg from "../brand_assets/profile.jpg";
+
+export const ANIMATION_CONTAINER_CLASS =
+  "flex flex-col items-center justify-center w-full h-full";
 
 // ─── ADD YOUR EXHIBITS HERE ──────────────────────────────────────────────────
 const EXHIBITS = [
@@ -30,10 +35,16 @@ const EXHIBITS = [
     height: "40vh",
     dark: false,
   },
-    {
+  {
     title: "Horizontal",
     component: Horizontal,
     height: "30vh",
+    dark: false,
+  },
+  {
+    title: "Boxes",
+    component: Boxes,
+    height: "70vh",
     dark: false,
   },
 ];
@@ -126,7 +137,7 @@ export default function AnimationMuseum() {
             }}
           >
             <img
-              src="/brand_assets/profile.jpg"
+              src={profileImg}
               alt="Evan de Jesus"
               style={{
                 width: "100%",

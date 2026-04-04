@@ -16,7 +16,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import "./Horizontal.css";
+import { ANIMATION_CONTAINER_CLASS } from "../AnimationMuseum";
 
 gsap.registerPlugin(SplitText);
 
@@ -24,13 +24,8 @@ export default function MyAnimation() {
   const containerRef = useRef(null);
   const elementRef = useRef(null);
   useEffect(() => {
-    // gsap.context() scopes all GSAP selectors to this component
-    // and automatically cleans up on unmount via ctx.revert()
     const ctx = gsap.context(() => {
-      // ── your animation here ──────────────────────────────────────
-
       let text = document.querySelector(".headline");
-      gsap.set(text, { opacity: 1 });
       let mySplitText = SplitText.create(text, {
         type: "chars, words",
         charsClass: "char",
@@ -57,30 +52,45 @@ export default function MyAnimation() {
             stagger: 0.05,
             onComplete: () => {
               mySplitText.revert();
-              text.removeAttribute("aria-hidden");
             },
           });
         };
         el.addEventListener("click", listener);
 
-        // Cleanup is mandatory to avoid memory leaks
         return () => el.removeEventListener("click", listener);
       }
+    }, containerRef);
 
-      // ─────────────────────────────────────────────────────────────
-    }, containerRef); // ← scope
-
-    return () => ctx.revert(); // cleanup
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={containerRef} className="cont">
-      <div className="container">
-        <h1 className="headline" aria-hidden="true">
+    <div
+      ref={containerRef}
+      className={`${ANIMATION_CONTAINER_CLASS} font-[Mori]`}
+    >
+      <div className="w-full">
+        <h1
+          className="headline text-center text-[rgb(14,16,15)] text-[clamp(2rem,6rem,4.5vw)] leading-tight"
+          style={{
+            willChange: "transform",
+            fontKerning: "none",
+            WebkitTextRendering: "optimizeSpeed",
+            textRendering: "optimizeSpeed",
+            WebkitTransform: "translateZ(0)",
+            transform: "translateZ(0)",
+          }}
+          aria-hidden="true"
+        >
           This text animates and then reverts
         </h1>
       </div>
-      <button ref={elementRef}>animate me</button>
+      <button
+        ref={elementRef}
+        className="mt-6 border border-[var(--ink)] bg-transparent text-[var(--ink)] px-4 py-2 hover:opacity-80 transition-opacity"
+      >
+        animate me
+      </button>
     </div>
   );
 }
