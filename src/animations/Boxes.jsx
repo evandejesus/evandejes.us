@@ -44,7 +44,7 @@ export default function MyAnimation() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center justify-between w-full h-full p-20 m-0"
+      className="flex flex-col items-center justify-between w-full h-full p-40 m-0"
     >
       <div class="green w-32 h-32 bg-green-500 rounded-lg"></div>
       <div class="purple w-32 h-32 bg-purple-500 rounded-lg"></div>
