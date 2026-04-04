@@ -115,11 +115,8 @@ export default function Connect() {
       {/* Screen-filling word */}
       <div
         ref={containerRef}
-        style={{
-          overflow: 'hidden',
-          padding: '0 1.5rem',
-          lineHeight: 0.85,
-        }}
+        style={{ position: 'fixed', bottom: 0, left: 0, right: 0, overflow: 'hidden', padding: '1rem 1.5rem', lineHeight: 0.85, pointerEvents: 'none' }}
+
       >
         <span
           ref={wordRef}
